@@ -1,0 +1,91 @@
+<svg viewBox="0 0 1200 660" width="1200" height="660" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ah" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" refX="9" refY="4.5" orient="auto"><path d="M0,0 L11,4.5 L0,9 Z" fill="#666666"/></marker>
+    <marker id="ahg" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" refX="9" refY="4.5" orient="auto"><path d="M0,0 L11,4.5 L0,9 Z" fill="#21A364"/></marker>
+    <marker id="aht" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" refX="9" refY="4.5" orient="auto"><path d="M0,0 L11,4.5 L0,9 Z" fill="#1C6D72"/></marker>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.12"/></filter>
+  </defs>
+
+  <!-- LANE 1: chat -->
+  <text x="36" y="40" font-size="20" font-weight="700" fill="#1C6D72">1 &#183; Chat &#8212; prompt in, answer out</text>
+  <g filter="url(#sh)">
+    <rect x="140" y="64" width="124" height="50" rx="10" fill="#ffffff" stroke="#999999" stroke-width="1.5"/>
+    <rect x="380" y="64" width="124" height="50" rx="10" fill="#1C6D72"/>
+    <rect x="620" y="64" width="124" height="50" rx="10" fill="#eef6f7" stroke="#1C6D72" stroke-width="1.2"/>
+  </g>
+  <text x="202" y="95" font-size="17" text-anchor="middle" fill="#2a2a2a">You</text>
+  <text x="442" y="95" font-size="17" text-anchor="middle" fill="#ffffff" font-weight="600">LLM</text>
+  <text x="682" y="95" font-size="17" text-anchor="middle" fill="#1C6D72" font-weight="600">Output</text>
+  <line x1="268" y1="89" x2="372" y2="89" stroke="#666666" stroke-width="2.5" marker-end="url(#ah)"/>
+  <line x1="508" y1="89" x2="612" y2="89" stroke="#666666" stroke-width="2.5" marker-end="url(#ah)"/>
+  <text x="800" y="84" font-size="14" fill="#666666">One pass, no outside help.</text>
+  <text x="800" y="104" font-size="14" fill="#666666">General knowledge, drafting, Q&amp;A.</text>
+
+  <line x1="36" y1="150" x2="1164" y2="150" stroke="#000000" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- LANE 2: one tool call -->
+  <text x="36" y="196" font-size="20" font-weight="700" fill="#1C6D72">2 &#183; One tool call &#8212; the model reaches out once, then answers</text>
+  <g filter="url(#sh)">
+    <rect x="48" y="226" width="120" height="50" rx="10" fill="#ffffff" stroke="#999999" stroke-width="1.5"/>
+    <rect x="264" y="226" width="120" height="50" rx="10" fill="#1C6D72"/>
+    <rect x="480" y="226" width="120" height="50" rx="10" fill="#ffffff" stroke="#1C6D72" stroke-width="2"/>
+    <rect x="696" y="226" width="120" height="50" rx="10" fill="#1C6D72"/>
+    <rect x="912" y="226" width="120" height="50" rx="10" fill="#eef6f7" stroke="#1C6D72" stroke-width="1.2"/>
+  </g>
+  <text x="108" y="257" font-size="16" text-anchor="middle" fill="#2a2a2a">You</text>
+  <text x="324" y="257" font-size="16" text-anchor="middle" fill="#ffffff" font-weight="600">LLM</text>
+  <text x="540" y="257" font-size="16" text-anchor="middle" fill="#1C6D72" font-weight="600">Tool</text>
+  <text x="756" y="257" font-size="16" text-anchor="middle" fill="#ffffff" font-weight="600">LLM</text>
+  <text x="972" y="257" font-size="16" text-anchor="middle" fill="#1C6D72" font-weight="600">Output</text>
+  <line x1="172" y1="251" x2="258" y2="251" stroke="#666666" stroke-width="2.5" marker-end="url(#ah)"/>
+  <line x1="388" y1="251" x2="474" y2="251" stroke="#666666" stroke-width="2.5" marker-end="url(#ah)"/>
+  <line x1="604" y1="251" x2="690" y2="251" stroke="#21A364" stroke-width="2.5" marker-end="url(#ahg)"/>
+  <line x1="820" y1="251" x2="906" y2="251" stroke="#666666" stroke-width="2.5" marker-end="url(#ah)"/>
+  <text x="431" y="220" font-size="13" text-anchor="middle" fill="#666666">calls</text>
+  <text x="647" y="220" font-size="13" text-anchor="middle" fill="#21A364">result</text>
+
+  <line x1="36" y1="312" x2="1164" y2="312" stroke="#000000" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- LANE 3: agentic loop -->
+  <text x="36" y="356" font-size="20" font-weight="700" fill="#1C6D72">3 &#183; Agentic loop &#8212; the app keeps calling the model until the task is done</text>
+
+  <!-- You -->
+  <g filter="url(#sh)"><rect x="60" y="476" width="120" height="50" rx="10" fill="#ffffff" stroke="#999999" stroke-width="1.5"/></g>
+  <text x="120" y="507" font-size="16" text-anchor="middle" fill="#2a2a2a">You</text>
+  <line x1="184" y1="501" x2="296" y2="501" stroke="#666666" stroke-width="2.5" marker-end="url(#ah)"/>
+
+  <!-- resources box -->
+  <text x="450" y="384" font-size="13" text-anchor="middle" fill="#666666">what the agent can reach</text>
+  <g filter="url(#sh)"><rect x="300" y="392" width="300" height="56" rx="10" fill="#eaf7fa" stroke="#6AD1E3" stroke-width="1.5"/></g>
+  <line x1="400" y1="392" x2="400" y2="448" stroke="#6AD1E3" stroke-width="1"/>
+  <line x1="500" y1="392" x2="500" y2="448" stroke="#6AD1E3" stroke-width="1"/>
+  <text x="350" y="426" font-size="15" text-anchor="middle" fill="#1C6D72" font-weight="600">Tools</text>
+  <text x="450" y="426" font-size="15" text-anchor="middle" fill="#1C6D72" font-weight="600">Files</text>
+  <text x="550" y="426" font-size="15" text-anchor="middle" fill="#1C6D72" font-weight="600">Memory</text>
+
+  <!-- agent bar -->
+  <g filter="url(#sh)"><rect x="300" y="476" width="300" height="50" rx="10" fill="#1C6D72"/></g>
+  <text x="450" y="507" font-size="18" text-anchor="middle" fill="#ffffff" font-weight="700">Agent</text>
+
+  <!-- model box -->
+  <g filter="url(#sh)"><rect x="300" y="558" width="300" height="60" rx="10" fill="#e7f5ee" stroke="#21A364" stroke-width="1.5"/></g>
+  <text x="450" y="584" font-size="16" text-anchor="middle" fill="#177a4b" font-weight="700">Language model</text>
+  <text x="450" y="606" font-size="13.5" text-anchor="middle" fill="#21A364">plan &#183; act &#183; observe</text>
+
+  <!-- resources <-> agent -->
+  <line x1="418" y1="448" x2="418" y2="472" stroke="#666666" stroke-width="2.5" marker-end="url(#ah)"/>
+  <line x1="482" y1="476" x2="482" y2="452" stroke="#21A364" stroke-width="2.5" marker-end="url(#ahg)"/>
+  <!-- agent <-> model -->
+  <line x1="418" y1="526" x2="418" y2="554" stroke="#1C6D72" stroke-width="2.5" marker-end="url(#aht)"/>
+  <line x1="482" y1="558" x2="482" y2="530" stroke="#21A364" stroke-width="2.5" marker-end="url(#ahg)"/>
+
+  <!-- exit to output -->
+  <line x1="604" y1="493" x2="772" y2="493" stroke="#666666" stroke-width="2.5" marker-end="url(#ah)"/>
+  <text x="690" y="484" font-size="13" text-anchor="middle" fill="#666666">when done</text>
+
+  <!-- self-loop: repeats, placed below the exit arrow so nothing crosses -->
+  <path d="M612,523 C664,508 664,556 612,541" fill="none" stroke="#21A364" stroke-width="2.5" marker-end="url(#ahg)"/>
+  <text x="672" y="538" font-size="13" fill="#21A364">repeats until done</text>
+  <g filter="url(#sh)"><rect x="776" y="476" width="124" height="50" rx="10" fill="#eef6f7" stroke="#1C6D72" stroke-width="1.2"/></g>
+  <text x="838" y="507" font-size="16" text-anchor="middle" fill="#1C6D72" font-weight="600">Output</text>
+</svg>
